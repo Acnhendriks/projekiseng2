@@ -1,0 +1,29 @@
+<div class="left-menu-container" [ngClass]="{active : getLeftMenuState()}" *ngIf="getLeftMenuState()">
+    <div class="menu-box">
+        <div class="menu-category" (click)="goToLanding()">
+            <div class="img-ctr home"></div>
+            <div class="txt-ctr">HOME</div>
+        </div>
+        <div class="menu-category" (click)="goToTest()">
+            <div class="img-ctr profile"></div>
+            <div class="txt-ctr">PROFILE</div>
+        </div>
+        <div class="menu-category">
+            <div class="img-ctr transaction"></div>
+            <div class="txt-ctr">TRANSACTION</div>
+        </div>
+        <div class="menu-category">
+            <div class="img-ctr point"></div>
+            <div class="txt-ctr">POINT</div>
+        </div>
+        <div class="menu-category">
+            <div class="img-ctr help"></div>
+            <div class="txt-ctr">HELP</div>
+        </div>
+        <div class="menu-category">
+            <div class="img-ctr logout"></div>
+            <div class="txt-ctr">LOG OUT</div>
+        </div>
+    </div>
+</div>
+<div class="left-menu-other" *ngIf="getLeftMenuState()" (click)="toggleLeftMenu()"></div>

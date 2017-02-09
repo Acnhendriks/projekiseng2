@@ -1,0 +1,72 @@
+// header for web apps
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: calc(100% - 10px);
+    padding: 0 5px;
+    height: 50px;
+    border-bottom: 1px solid $light-gray;
+    background-color: $white;
+}
+
+.header-container-small{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    .main-box{
+        background-color: $red;
+        width: 100%;
+        .default-box{
+            height: 14vw;
+            width: 100%;
+            display: table;
+            .title{
+                // position: fixed;
+                width: 100%;
+                color: $white;
+                font-size: 4vw;
+                // padding: 3% 0% 0% 3%;
+                padding-left: 20%;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .header-icon{
+                width: 12vw;
+                height: 12vw;
+                position: fixed;
+                cursor: pointer;
+                &.hamburger{
+                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRFAAAA%2F%2F%2F%2FAAAAAAAAAAAAAAAAAAAA%2F%2F%2F%2FeQ7W7QAAAAd0Uk5TAAAIGCBIYL3mPFwAAAA%2FSURBVChTYxBEAwx0ElAvRwKKQAFzZAFDoIBpGgKkggSUXRDAGaSFARkwYhVghFoogEuATu7AEKCFO9AANQQAPu5OcaM2uDkAAAAASUVORK5CYII%3D) center center no-repeat;
+                    background-size: 8vw;
+                    background-position: center center;
+                    padding: 0% 0% 0% 3%;
+                }
+                &.back{
+                    right: 0;
+                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRFAAAA%2F%2F%2F%2FAAAAAAAAAAAAAAAAAAAA%2F%2F%2F%2FeQ7W7QAAAAd0Uk5TAAAIGCBIYL3mPFwAAAA%2FSURBVChTYxBEAwx0ElAvRwKKQAFzZAFDoIBpGgKkggSUXRDAGaSFARkwYhVghFoogEuATu7AEKCFO9AANQQAPu5OcaM2uDkAAAAASUVORK5CYII%3D) center center no-repeat;
+                    background-size: 7vw;
+                    background-position: center center;
+                    padding: 0% 3% 0% 0%;
+                }
+                &.more{
+                    right: 0;
+                    background: url('../assets/img/icons/more-button.svg')no-repeat;
+                    background-size: 7vw;
+                    background-position: center center;
+                    padding: 0% 3% 0% 0%;
+                }
+                &.tsel-logo {
+                    background: url('../assets/img/telkomsel.png')no-repeat;
+                    background-position:center;
+                    background-size: 12vw;
+                    border-radius: 50%;
+                    margin-left: 3%;
+                    margin-top: 1%;
+                }
+            }
+        }
+    }
+}

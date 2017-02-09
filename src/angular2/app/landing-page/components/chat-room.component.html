@@ -1,0 +1,142 @@
+<div class="chat-container">
+
+	<!-- <div class="chat-sub-header">Selamat datang 081294251170, agen T.I.V.A. siap untuk membantu</div> -->
+
+	<!-- <sliding-left-right></sliding-left-right> -->
+	<!-- <div class="chat-sub-container">
+		<div class="sliding-left-right-container">
+		    <div class="sliding-wrapper">
+			    <div class="item-big-box">
+			    	<div class="item-box">
+				    		<div class="corner" (click)="pilih(option)"></div>
+			    		<div class="item-border">
+				    		<div>Smartphone corner</div>
+				    	</div>
+			    	</div>
+			    </div>
+			    <div class="item-big-box">
+			    	<div class="item-box">
+				    		<div class="grapari" (click)="pilih(option)"></div>
+			    		<div class="item-border">
+				    		<div>graPARI</div>
+				    	</div>
+			    	</div>
+			    </div>
+		    </div>
+		</div>
+	</div> -->
+
+	<div #scrollMe style="overflow-y: scroll; height: 400px;" id="scroll-div" [style.height.px]="getHeight()">
+		<div class="chat-sub-container" *ngFor="let vLog of vLoggingList">
+			<div *ngIf='vLog.type === "left"'>
+				<div class="wrap-pic-left">
+					<div class="left-tsel-logo"></div>
+				</div>
+				<div class="talk-bubble-left tri-right round btm-left-in">
+					<div class="talktext">
+						<p>{{vLog.text}}</p>
+					</div>
+					<div class="talkname">
+						<b>TIVA</b>, {{vLog.date}}
+					</div>
+				</div>
+				<!-- <div *ngFor="let option of vLog.options" class="chat-sub-container">
+					<div class="talk-bubble-left-option round">
+						<div class="talktext" (click)="pilih(option)">
+							<p>{{option}}</p>
+						</div>
+					</div>
+				</div> -->
+			</div>
+
+			<div *ngIf='vLog.type === "typing"'>
+				<div class="talk-bubble-left-option round">
+					<div class="talktext">
+						<p>{{vLog.text}}</p>
+					</div>
+				</div>
+			</div>
+
+			<div *ngIf='vLog.type === "image"'>
+				<div class="talk-bubble-left-option round">
+					<div class="qrcode"></div>
+				</div>
+			</div>
+
+			<div *ngIf='vLog.type === "right"'>
+				<div class="wrap-pic-right">
+					<div class="right-donald"></div>
+				</div>
+				<div class="talk-bubble-right tri-right round btm-right-in">
+					<div class="talktext">
+						<p>{{vLog.text}}</p>
+					</div>
+					<div class="talkname">
+						<b>Donald</b>, {{vLog.date}}
+					</div>
+				</div>
+			</div>
+
+			<div class="sliding-left-right-container" *ngIf='vLog.type === "sliding"'>
+			    <div class="sliding-wrapper-3" [ngClass]="{'sliding-wrapper-4' : vTotalBox}">
+			    	<div *ngFor="let option of vLog.options">
+			    		<div class="item-big-box-3" [ngClass]="{'item-big-box-4' : vTotalBox}">
+					    	<div class="item-box" *ngIf='option === "myGraPARI Grand Indonesia"'>
+						    	<div class="grandindo" (click)="pilih(option)"></div>
+					    		<div class="item-border">
+						    		<div>{{option}}</div>
+						    	</div>
+					    	</div>
+					    	<div class="item-box" *ngIf='option === "GraPARI Kota Kasablanka"'>
+						    	<div class="kokas" (click)="pilih(option)"></div>
+					    		<div class="item-border">
+						    		<div>{{option}}</div>
+						    	</div>
+					    	</div>
+					    	<div class="item-box" *ngIf='option === "GraPARI Semanggi"'>
+						    	<div class="semanggi" (click)="pilih(option)"></div>
+					    		<div class="item-border">
+						    		<div>{{option}}</div>
+						    	</div>
+					    	</div>
+
+					    	<div class="item-box" *ngIf='option === "9-11"'>
+						    	<div class="nine-eleven" (click)="pilih(option)"></div>
+					    		<div class="item-border">
+						    		<div>9AM-11AM</div>
+						    	</div>
+					    	</div>
+					    	<div class="item-box" *ngIf='option === "11-13"'>
+						    	<div class="eleven-thirteen" (click)="pilih(option)"></div>
+					    		<div class="item-border">
+						    		<div>11AM-1PM</div>
+						    	</div>
+					    	</div>
+					    	<div class="item-box" *ngIf='option === "16-18"'>
+						    	<div class="sixteen-eighteen" (click)="pilih(option)"></div>
+					    		<div class="item-border">
+						    		<div>4PM-6PM</div>
+						    	</div>
+					    	</div>
+					    	<div class="item-box" *ngIf='option === "Tidak, Terimakasih"'>
+						    	<div class="terimakasih" (click)="pilih(option)"></div>
+					    		<div class="item-border">
+						    		<div>{{option}}</div>
+						    	</div>
+					    	</div>
+					    </div>
+					</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="chat-sub-container">
+		<div class='hidden-space-12'></div>
+	</div>
+
+	<input (focus)="scrollToBottom()" [(ngModel)]="vText" type="text" class="chat-textarea" placeholder="Ketik di sini!"/>
+	<div class="send-button" (click)="sendText()">
+		<div class="icon send"></div>
+	</div>
+</div>

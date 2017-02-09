@@ -1,0 +1,47 @@
+.button {
+    width: calc(50% - 34px);
+    padding: 12px;
+    // margin: 5px;
+    margin: 5px auto;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 4vw;
+
+    &.btn-inactive-gray {
+        background-color: transparent;
+        border: 1px solid $inactive-gray;
+        color: $inactive-gray;
+    }
+
+    &.btn-active-gray {
+        background-color: transparent;
+        border: 1px solid $active-gray;
+        color: $active-gray;
+    }
+}
+
+
+select {
+    // font-family: $font-style, sans-serif;
+    background: $white;
+    height: 8vw;
+    width: 90%;
+    color: $active-gray;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-appearance: none;
+    padding-left: 5vw;
+    appearance: none;
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        background: url('../assets/img/icons/greater-than.svg')no-repeat;
+        background-position: right 0 top 50%;
+        background-repeat: no-repeat;
+        background-size: 4vw;
+        border-radius: 5px;
+    }
+}
+
+option[value=""][disabled] {
+  display: none;
+}

@@ -1,0 +1,14 @@
+<!-- html view for web version -->
+<!-- <div class="header-container" *ngIf="getResize().largeUp">
+    <div>Test Header Web</div>
+</div> -->
+
+<!-- html view for mobile version -->
+<div class="header-container-small" *ngIf="!getResize().largeUp">
+	<div class="main-box">
+        <div class="default-box">
+            <div class="header-icon tsel-logo"></div>
+            <div id="header-title-id" class="title">{{getTitle()}}</div>
+        </div>
+    </div>
+</div>

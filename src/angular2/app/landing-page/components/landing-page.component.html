@@ -1,0 +1,34 @@
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="landing-container">
+	<select name="language" [(ngModel)]='vLanguage' (ngModelChange)="onChangeSelectLanguage($event)">
+		<option value="" disabled selected>Pilih bahasa</option>
+		<option value="English">English</option>
+		<option value="Indonesia">Bahasa Indonesia</option>
+	</select>
+	<div class="divider"></div>
+	<div class="word">Silahkan pilih bahasa yang tersedia dibawah. Pilihan bahasa masih dapat di ubah kembali.</div>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="button btn-inactive-gray" *ngIf="!vLanguage">Mulai Percakapan</div>
+<div class="button btn-active-gray" *ngIf="vLanguage" (click)="getStarted()">Mulai Percakapan</div>

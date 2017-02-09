@@ -1,0 +1,133 @@
+.icon {
+    width: 40px;
+    height: 40px;
+
+    &.hamburger {
+        background: url('../assets/img/icons/left-menu/hamburger-icon.svg') no-repeat;
+        background-size: 24px;
+        background-position: center;
+    }
+
+    &.close {
+        background: url('../assets/img/icons/modal/close_black_24px.svg')no-repeat;
+        background-size: 24px;
+        background-position: center; 
+    }
+
+    &.greater-than {
+        background: url('../assets/img/icons/greater-than.svg')no-repeat;
+        background-size: 15px;
+        background-position: right; 
+    }
+
+    &.send {
+        background: url('../assets/img/icons/send-button.svg')no-repeat;
+        background-size: 23px;
+        background-position: right; 
+    }
+}
+
+&.grapari {
+    background: url('../assets/img/grapari.jpg')no-repeat;
+    background-position:center;
+    background-size: 65vw;
+    height: 114px;
+    margin: auto;
+    border-radius: 2px 2px 0px 0px;
+}
+
+&.corner {
+    background: url('../assets/img/corner.jpg')no-repeat;
+    background-position:center;
+    background-size: 65vw;
+    height: 114px;
+    margin: auto;
+    border-radius: 2px 2px 0px 0px;
+}
+
+&.left-tsel-logo {
+    background: url('../assets/img/telkomsel.png')no-repeat;
+    background-position:center;
+    background-size: 12vw;
+    height: 12vw;
+    margin: auto;
+    float: left;
+    width: 12vw;
+    border-radius: 50%;
+}
+
+&.right-donald {
+    background: url('../assets/img/donald.jpg')no-repeat;
+    background-position:center;
+    background-size: 14vw;
+    height: 12vw;
+    margin: auto;
+    float: right;
+    width: 12vw;
+    border-radius: 50%;
+}
+
+&.qrcode {
+    background: url('../assets/img/qrcode.png')no-repeat;
+    background-position:center;
+    background-size: 50vw;
+    height: 60vw;
+    margin: auto;
+}
+
+// 7 PICS
+&.nine-eleven {
+    background: url('../assets/img/9-11.png')no-repeat;
+    background-position:center;
+    background-size: 60vw;
+    height: 36vw;
+    margin: auto;
+}
+
+&.eleven-thirteen {
+    background: url('../assets/img/11-13.png')no-repeat;
+    background-position:center;
+    background-size: 60vw;
+    height: 36vw;
+    margin: auto;
+}
+
+&.sixteen-eighteen {
+    background: url('../assets/img/16-18.png')no-repeat;
+    background-position:center;
+    background-size: 60vw;
+    height: 36vw;
+    margin: auto;
+}
+
+&.terimakasih {
+    background: url('../assets/img/terimakasih.png')no-repeat;
+    background-position:center;
+    background-size: 60vw;
+    height: 36vw;
+    margin: auto;
+}
+
+&.kokas {
+    background: url('../assets/img/kokas.png')no-repeat;
+    background-position:center;
+    background-size: 60vw;
+    height: 36vw;
+    margin: auto;
+}
+
+&.semanggi {
+    background: url('../assets/img/semanggi.png')no-repeat;
+    background-position:center;
+    background-size: 60vw;
+    height: 36vw;
+    margin: auto;
+}
+
+&.grandindo {
+    background: url('../assets/img/grandindo.png')no-repeat;
+    background-position:center;
+    background-size: 60vw;
+    height: 36vw;
+    margin: auto;
+}

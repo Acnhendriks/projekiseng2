@@ -1,0 +1,76 @@
+.left-menu-other {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 120;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    // start animation
+    -webkit-animation: slide 0.35s both;
+    animation: slide 0.35s both;
+    &.active{
+        @-webkit-keyframes slide {
+            100% { left: 0; }
+        }
+
+        @keyframes slide {
+            100% { left: 0; }
+        }
+    }
+    // end animation
+}
+
+.left-menu-container{
+        width: 300px;
+        z-index: 150;
+        // background-color: $blue;
+        background: $black; /* For browsers that do not support gradients */
+        /* For Safari 5.1 to 6.0 */
+        // background: -webkit-linear-gradient(red,orange,yellow,green);
+        /* For Opera 11.1 to 12.0 */
+        // background: -o-linear-gradient(red,orange,yellow,green);
+        /* For Fx 3.6 to 15 */
+        // background: -moz-linear-gradient(red,orange,yellow,green);
+        /* Standard syntax */
+        // background: linear-gradient(red,orange,yellow,green);
+        position: fixed;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        top: 0;
+        left: -75%;
+        
+        // start animation
+        -webkit-animation: slide 0.35s both;
+        animation: slide 0.35s both;
+        &.active{
+            @-webkit-keyframes slide {
+                100% { left: 0; }
+            }
+
+            @keyframes slide {
+                100% { left: 0; }
+            }
+        }
+        // end animation
+        
+        .menu-box{
+            margin-top: 40px;
+            display: inline-block;
+            width: 100%;
+            
+            .menu-category{
+                padding-left: 20px;
+                height: 50px;
+            }
+
+            .txt-ctr{
+                color:$white;
+                float:left;
+                text-align: left;
+                margin-top: 10px;
+                letter-spacing: 1px;
+            }
+        }
+}

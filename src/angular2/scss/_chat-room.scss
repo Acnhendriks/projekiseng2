@@ -1,0 +1,251 @@
+
+.hidden-space-12 {
+    height: 70px;
+}
+
+.chat-container {
+    height: 100%;
+
+    .chat-sub-header {
+        text-align: center;
+        border-bottom: 1px solid $divider-gray;
+        padding-bottom: 3vw;
+        font-size: 11px;
+        color: $active-gray;
+        margin-bottom: 10px;
+    }
+    input.chat-textarea {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        width: 83%;
+        height: 50px;
+        z-index: 99;
+        background-color: $white;
+        border-top: 5px solid $light-gray;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        outline: none;
+        padding-left: 10px;
+        padding-right: 64px;
+        font-weight: 400;
+    }
+
+    .send-button {
+        position: fixed;
+        display: block;
+        bottom: 0px;
+        right: -9px;
+        // width: 34px;
+        // height: 19px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 100;
+        cursor: pointer;
+        // background-color: $tangaroa;
+        color: $white;
+        padding: 9px 19px 5px 20px;;
+        border-radius: 5px;
+    }
+
+
+    .chat-sub-container {
+        width: 100%;
+        float: right;
+
+        .wrap-pic-right {
+            float: right;
+            margin-top: 10vw;
+        }
+
+        .wrap-pic-left {
+            float: left;
+            margin-top: 10vw;
+        }
+
+
+        /* CSS talk bubble */
+        .talk-bubble-right {
+            margin: 10px 10px 10px 0px;
+            display: inline-block;
+            position: relative;
+            height: auto;
+            background-color: $chat-me;
+            float: right;
+            color: $white;
+            max-width: 70%;
+        }
+
+        .talk-bubble-left {
+            margin: 10px 0px 10px 10px;
+            display: inline-block;
+            position: relative;
+            height: auto;
+            background-color: $chat-you;
+            max-width: 70%;
+            float: left;
+        }
+
+        .talk-bubble-left-option {
+            margin: 3px 40px 3px 20px;
+            display: inline-block;
+            position: relative;
+            height: auto;
+            background-color: $chat-you;
+            width: 200px;
+        }
+
+        .round{
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+
+        }
+
+        /* Right triangle, left side slightly down */
+        .tri-right.border.left-in:before {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -40px;
+            right: auto;
+            top: 30px;
+            bottom: auto;
+            border: 20px solid;
+            border-color: #666 #666 transparent transparent;
+            color: $white;
+        }
+        .tri-right.left-in:after{
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -20px;
+            right: auto;
+            top: 10px;
+            bottom: auto;
+            border: 12px solid;
+            border-color: $chat-you $chat-you transparent transparent;
+        }
+
+        /* Right triangle, right side slightly down*/
+        .tri-right.border.right-in:before {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: -40px;
+            top: 30px;
+            bottom: auto;
+            border: 20px solid;
+            border-color: #666 transparent transparent #666;
+        }
+        .tri-right.right-in:after{
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: -20px;
+            top: 10px;
+            bottom: auto;
+            border: 12px solid;
+            border-color: $chat-me transparent transparent $chat-me;
+        }
+
+        // INI BARU
+        /*Right triangle, placed bottom left side slightly in*/
+        .tri-right.border.btm-left-in:before {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 30px;
+            right: auto;
+            top: auto;
+            bottom: -40px;
+            border: 20px solid;
+            border-color: #666 transparent transparent #666;
+        }
+        .tri-right.btm-left-in:after{
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 10px;
+            right: auto;
+            top: auto;
+            bottom: -10px;
+            border: 12px solid;
+            border-color: $chat-you transparent transparent $chat-you;
+        }
+
+        /*Right triangle, placed bottom right side slightly in*/
+        .tri-right.border.btm-right-in:before {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: 30px;
+            bottom: -40px;
+            border: 20px solid;
+            border-color: #666 #666 transparent transparent;
+        }
+        .tri-right.btm-right-in:after{
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: 10px;
+            bottom: -10px;
+            border: 12px solid;
+            border-color: $chat-me $chat-me transparent transparent;
+        }
+        // INI BARU
+
+        /* talk bubble contents */
+        .talktext{
+            padding: 1em;
+            text-align: left;
+            line-height: 1.5em;
+        }
+        .talktext p{
+            
+            -webkit-margin-before: 0em;
+            -webkit-margin-after: 0em;
+        }
+
+        .talkname {
+            text-align: left;
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-bottom: 1em;
+        }
+    }
+}
+
+
+
+.landing-container {
+    width: 100%;
+    text-align: center;
+
+    .divider {
+        margin: auto;
+        border-bottom: 1px solid $divider-gray;
+        width: 90%;
+    }
+
+    .word {
+        margin: auto;
+        width: 90%;
+        font-size: 10px;
+        color: $active-gray;
+    }
+}

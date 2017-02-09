@@ -1,0 +1,28 @@
+// text related css put in here
+&.size-12 {
+    font-size: 12px;
+}
+
+&.left {
+    text-align: left;
+}
+
+&.center {
+    text-align: center;
+}
+
+&.right {
+    text-align: right;
+}
+
+&.bold {
+    font-weight: bold;
+}
+
+&.underline {
+    text-decoration: underline;
+}
+
+&.italic {
+    font-style: italic;
+}
