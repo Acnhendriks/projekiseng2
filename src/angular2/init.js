@@ -20,7 +20,7 @@ if(navigator.userAgent.match(/(iOS|iPhone|iPod|iPad|Android|blackberry|Windows P
 
 function bootstrapWeb() {
     // WL.Client.init(wlInitOptions);
-    console.log("Bootstrapping AngularJS");
+    console.log("Bootstrapping AngularJS web");
 }
 
 function bootstrapApp() {
@@ -31,11 +31,11 @@ function bootstrapApp() {
         StatusBar.backgroundColorByHexString("#40aa1b");
     }
     // StatusBar.overlaysWebView(false);
-    console.log("Bootstrapping AngularJS");
-    deviceId = device.uuid;
+    console.log("Bootstrapping AngularJS appp");
+    // deviceId = device.uuid;
     
     // fullscreen
-    AndroidFullScreen.immersiveMode(successFunction, errorFunction);
+    // AndroidFullScreen.immersiveMode(successFunction, errorFunction);
 }
 
 function successFunction()

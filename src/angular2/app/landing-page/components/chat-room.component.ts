@@ -6,6 +6,7 @@ import { Modal } from '../../shared/services/modal.service';
 import { PageNavigationService } from '../../shared/services/page-navigation.service';
 import { ChatRoomService } from '../services/chat-room.service';
 
+
 @Component({
 	selector: 'chat-room',
 	templateUrl: './chat-room.component.html'
@@ -24,8 +25,10 @@ export class ChatRoomComponent implements OnInit, AfterViewChecked, OnDestroy {
 	vTotalBox:boolean = false;
 
 	vHeight: any = 500;
+	vHeightTmp: any = 500;
 
 	vDate: Date = new Date();
+	vKeyboardShow: boolean = false;
 
 	constructor(
 		private _layoutService: LayoutService,
@@ -56,17 +59,18 @@ export class ChatRoomComponent implements OnInit, AfterViewChecked, OnDestroy {
         let sHour = hour > 9 ? hour : '0' + hour;
         let min = this.vDate.getMinutes();
         let sMin = min > 9 ? min : '0' + min;
-        console.log('asdf : ' +sHour+ ':' +sMin+ ' ' +format);
         return sHour+ ':' +sMin+ ' ' +format;
 	}
 
 	ngOnInit() {
 		this.vHeight = document.body.scrollHeight - 150;
+		this.vHeightTmp = document.body.scrollHeight - 150;
 		console.log('this.vHeight : ' +this.vHeight);
 		document.addEventListener('deviceready', this.onDeviceReady, false);
 	}
 
 	onDeviceReady() {
+		console.log('onDeviceReady');
 		document.addEventListener('hidekeyboard', this.onKeyboardHide, false);
 		document.addEventListener('showkeyboard', this.onKeyboardShow, false);
 	}
@@ -79,18 +83,17 @@ export class ChatRoomComponent implements OnInit, AfterViewChecked, OnDestroy {
 		console.log('onKeyboardShow');
 	}
 
+	ngOnDestroy() {
+		clearInterval(this.vSubscriptionPolling);
+	}
+
 	ngAfterViewChecked() {
-		// console.log('ngAfterViewChecked : ' +this.myScrollContainer.nativeElement.scrollTop+ ' ' +this.myScrollContainer.nativeElement.scrollHeight);
-		// if (this.myScrollContainer.nativeElement.scrollHeight-this.myScrollContainer.nativeElement.scrollTop <= this.vHeight) {
-			// this.scrollToBottom();
-		// }
+		console.log('this.vHeight : ' +this.vHeight);
+		console.log('ngAfterViewChecked : ' +this.myScrollContainer.nativeElement.scrollTop+ ' ' +this.myScrollContainer.nativeElement.scrollHeight+ ' ' +this.myScrollContainer.nativeElement.offsetTop);
+		// console.log('asd : ' +document.getElementById('scroll-div').scrollTop+ ' - ' +document.getElementById('scroll-div').scrollHeight+ ' - ' +document.getElementById('scroll-div').offsetTop);
 		if (this.vAutoScroll) {
 			this.scrollToBottom();
 		}
-	}
-
-	ngOnDestroy() {
-		clearInterval(this.vSubscriptionPolling);
 	}
 
 	getHeight() {
@@ -98,7 +101,6 @@ export class ChatRoomComponent implements OnInit, AfterViewChecked, OnDestroy {
 	}
 
 	scrollToBottom(): void {
-		// console.log('scrollToBottom : ' +this.myScrollContainer.nativeElement.scrollTop+ ' ' +this.myScrollContainer.nativeElement.scrollHeight);
 		try {
 			this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
 		} catch (err) {
@@ -108,6 +110,14 @@ export class ChatRoomComponent implements OnInit, AfterViewChecked, OnDestroy {
 		if (this.myScrollContainer.nativeElement.scrollHeight - this.myScrollContainer.nativeElement.scrollTop === this.vHeight) {
 			this.vAutoScroll = false;
 		}
+	}
+
+	scrollToBott(scrollObject: string) {
+		// console.log('this.vHeight : ' +this.vHeight);
+
+		// console.log('scrollToBott : ' +this.myScrollContainer.nativeElement.scrollTop+ ' - '  +this.myScrollContainer.nativeElement.scrollHeight);
+		// console.log('asd : ' +document.getElementById(scrollObject).offsetTop+ ' - ' +document.getElementById(scrollObject).scrollTop);
+
 	}
 
 	showModal() {
@@ -121,7 +131,6 @@ export class ChatRoomComponent implements OnInit, AfterViewChecked, OnDestroy {
 	}
 
 	pilih(pParam: string) {
-		// console.log('PILI : ' +this.vLoggingList[this.vLoggingList.length-1].options);
 
 		this.vLoggingList[this.vLoggingList.length-1].options = null;
 		
