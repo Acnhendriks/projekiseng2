@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.telkomsel" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>TIVA</name>
+    <name>ACN TIVA</name>
     <description>
         Telco Interactive Virtual Assistance
     </description>
@@ -8,23 +8,23 @@
         Hendrik Sutrisna
     </author>
     <platform name="android">
-        <splash density="port-hdpi" src="res/drawable-port-hdpi/screen.png" />
-        <splash density="port-ldpi" src="res/drawable-port-ldpi/screen.png" />
-        <splash density="port-mdpi" src="res/drawable-port-mdpi/screen.png" />
-        <splash density="port-xhdpi" src="res/drawable-port-xhdpi/screen.png" />
-        <icon density="ldpi" src="res/app-icon/android/telkomsel_logo.png" />
-        <icon density="mdpi" src="res/app-icon/android/telkomsel_logo.png" />
-        <icon density="hdpi" src="res/app-icon/android/telkomsel_logo.png" />
-        <icon density="xhdpi" src="res/app-icon/android/telkomsel_logo.png" />
-        <icon density="xxhdpi" src="res/app-icon/android/telkomsel_logo.png" />
-        <icon density="xxxhdpi" src="res/app-icon/android/telkomsel_logo.png" />
+        <splash density="port-hdpi" src="res/drawable-port-hdpi/splash-port-hdpi.png" />
+        <splash density="port-ldpi" src="res/drawable-port-ldpi/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="res/drawable-port-mdpi/splash-port-mdpi.png" />
+        <splash density="port-xhdpi" src="res/drawable-port-xhdpi/splash-port-xhdpi.png" />
+        <icon density="ldpi" src="res/app-icon/android/telkomsel_logo_ldpi.png" />
+        <icon density="mdpi" src="res/app-icon/android/telkomsel_logo_mdpi.png" />
+        <icon density="hdpi" src="res/app-icon/android/telkomsel_logo_hdpi.png" />
+        <icon density="xhdpi" src="res/app-icon/android/telkomsel_logo_xhdpi.png" />
+        <icon density="xxhdpi" src="res/app-icon/android/telkomsel_logo_xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/app-icon/android/telkomsel_logo_xxxhdpi.png" />
     </platform>
     <preference name="DisallowOverscroll" value="true" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#282828" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="7000" />
     <preference name="BackgroundColor" value="0xff282828" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreen" value="false" />
@@ -54,5 +54,4 @@
     <engine name="android" spec="~6.0.0" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova-plugin-splashscreen" spec="~3.2.2" />
-    <plugin name="ionic-plugin-keyboard" spec="~2.2.1" />
 </widget>
