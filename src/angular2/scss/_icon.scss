@@ -59,12 +59,13 @@
 &.right-singgih {
     background: url('../assets/img/singgih.jpg')no-repeat;
     background-position:center;
-    background-size: 14vw;
+    background-size: 12vw;
     height: 12vw;
     margin: auto;
     float: right;
     width: 12vw;
     border-radius: 50%;
+    border: 1px solid lightgray;
 }
 
 &.qrcode {
